@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!--수식을 쓰기위한 자바스크립트 코드-->
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
             tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
@@ -28,8 +29,13 @@
         }
 
         .fieldset {
-
+            width:700px;
             margin:0 auto;
+        }
+
+        .box1 {
+            border-style: solid;
+            border-color: green;
         }
     </style>
 
@@ -56,7 +62,7 @@
     <br><br>
 
 
-    <fieldset class="fieldset">
+    <fieldset class="fieldset" style="border-color: red">
         <legend style="text-align: center; font-weight:700;">Domination Convergence Theorem</legend>
         Let {f<sub>n</sub>} be a sequence measurable functions. Suppose that the sequence converges pointwise to a function f i.e.
         <br>
@@ -66,6 +72,17 @@
         for all point $x \in S$ and all $n$ in the index set. Then $f_n, f$ are integrable, and
         \[ \lim_{n \to \infty} \int_{S} f_n d\mu = \int_{S} \lim_{n \to \infty} f_nd\mu = \int_{S} fd\mu\]
     </fieldset>
+
+    <br><br>
+
+    <div class="fieldset box1">
+        <h2>Theorem 3.2.1  Green's Theorem </h2>
+            Let C be a positive oriented, piecewise smooth, simple closed curve in a plane, and $D$ be the region bounded by $C$.
+        If $L$ and $M$ are functions of $(x, y)$ defined on an open region containing $D$ and have continuous partial derivatives there, then
+        \[ \oint\limits_{C}\]
+        
+    </div>
+
 
 </body>
 </html>
