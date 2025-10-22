@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+</script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .narrow {
+            letter-spacing: -0.3rem;
+        }
+
+        .wide {
+            letter-spacing: 2rem;
+        }
+
+        .fieldset {
+
+            margin:0 auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <span class="span">
+    리듬게임을 방금 입문한 초보라도 배속을 어느정도 높여서 하는게 좋음 왜냐면<br><br>
+    <p class="narrow">이렇게 써 있는 것을 읽는 것보다</p><br>
+    <p>이렇게 써 있는 것을 보는게 더 편하기 때문</p><br>
+    <p class="wide">근데 너무 빠르면 또 보기 어려움</p>
+    </span>
+    
+    <br><br>
+
+    <fieldset class="fieldset" >
+        <legend style="text-align: center; font-weight:700;">근의 공식</legend>
+        For  \(ax^2 + bx + c = 0\)  where \(a \ne 0\), 
+        <p style="text-align: center; font-size: larger; font-weight: 700;">
+            $x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}$
+        </p>
+    </fieldset>
+
+    <br><br>
+
+
+    <fieldset class="fieldset">
+        <legend style="text-align: center; font-weight:700;">Domination Convergence Theorem</legend>
+        Let {f<sub>n</sub>} be a sequence measurable functions. Suppose that the sequence converges pointwise to a function f i.e.
+        <br>
+        <p style="font-weight: bold;">\[\lim_{n \to \infty} f_n(x) = f(x) \]</p>
+        exists for every $x \in S$. Asuume that the sequence $f_n$ is dominated by some integrable function $g$such that
+        \[ \left|f_n(x) \right| \leq g(x)\]
+        for all point $x \in S$ and all $n$ in the index set. Then $f_n, f$ are integrable, and
+        \[ \lim_{n \to \infty} \int_{S} f_n d\mu = \int_{S} \lim_{n \to \infty} f_nd\mu = \int_{S} fd\mu\]
+    </fieldset>
+
+</body>
+</html>
