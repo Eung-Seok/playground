@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .form {
+            border: 1px solid black;
+            width: 600px;
+            position:relative;
+            top:30px;
+            margin: 0 auto;
+        }
+
+
+        .subform {
+            position:relative;
+            width: 400px;
+            text-align: right;
+            left:300;
+        }
+
+        .required_field::before {
+            content: "*";
+            color:red ;
+        }
+
+        .submit {
+            position:relative;
+            left:227px;
+            background-color:lightblue;
+            width: 173px;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form">
+        <div class="subform">
+            <br>
+            <p class="required_field">E-mail : <input type="text"></p><br>
+            <p class="required_field">Name : <input type="text"> </p><br>
+            <p class="required_field">Username : <input type="text"> </p><br>
+            <p class="required_field">Password : <input type="password"> </p><br>
+            <p class="required_field">Confirm Password : <input type="password"> </p><br>
+        </div>
+        <button class="submit" type="submit"><h3>Create</h3></button>
+    </form>
+</body>
+
+</html>

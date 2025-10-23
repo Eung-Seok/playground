@@ -15,11 +15,24 @@
     <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
+        a:link {
+            color: red;
+        }
+
+        a:hover {
+            color: green;
+        }
+
+        a:visited {
+            color: purple;
+        }
+
         .narrow {
             letter-spacing: -0.3rem;
         }
@@ -29,31 +42,92 @@
         }
 
         .fieldset {
-            width:700px;
-            margin:0 auto;
+            width: 700px;
+            margin: 0 auto;
         }
 
         .box1 {
             border-style: solid;
             border-color: green;
         }
+
+        .rythm {
+            background-color: lightgray;
+            width: 800px;
+            position: relative;
+            left: 250px;
+            top: 20px;
+        }
+
+        .head {
+
+            background-color: lightgray;
+        }
+
+        .main {
+            display: inline-block;
+            width: 200px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .container {
+            display: inline-block;
+            width: 150px;
+            text-align: center;
+        }
+
+        .subindex {
+            display: none;
+        }
+
+        .subreference {
+            display:none;
+        }
     </style>
 
 </head>
 
 <body>
-    <span class="span">
-    리듬게임을 방금 입문한 초보라도 배속을 어느정도 높여서 하는게 좋음 왜냐면<br><br>
-    <p class="narrow">이렇게 써 있는 것을 읽는 것보다</p><br>
-    <p>이렇게 써 있는 것을 보는게 더 편하기 때문</p><br>
-    <p class="wide">근데 너무 빠르면 또 보기 어려움</p>
-    </span>
-    
+    <div class="head">
+        <span class="main">응석피디아</span>
+
+        <span class="container">
+            <span class="index">Index</span>
+            <span class="subindex">
+                <p class="index_item">리듬게임</p>
+                <p class="index_item">근의 공식</p>
+                <p class="index_item">DCT</p>
+                <p class="index_item">Green's Theorem</p>
+            </span>
+        </span>
+
+        <span class="container">
+            <span class="reference">Reference</span>
+            <span class="subreference">
+                <p class="ref_item">리듬게임</p>
+                <p class="ref_item">근의 공식</p>
+                <p class="ref_item">DCT</p>
+                <p class="ref_item">Green's Theorem</p>
+            </span>
+        </span>
+        <a href="./log_in.html">login</a>
+        <a href="./register.html">register</a>
+    </div>
+    <div class="rythm">
+        <span class="span">
+            리듬게임을 방금 입문한 초보라도 배속을 어느정도 높여서 하는게 좋음 왜냐면<br><br>
+            <p class="narrow">이렇게 써 있는 것을 읽는 것보다</p><br>
+            <p>이렇게 써 있는 것을 보는게 더 편하기 때문</p><br>
+            <p class="wide">근데 너무 빠르면 또 보기 어려움</p>
+        </span>
+    </div>
+
     <br><br>
 
-    <fieldset class="fieldset" >
+    <fieldset class="fieldset">
         <legend style="text-align: center; font-weight:700;">근의 공식</legend>
-        For  \(ax^2 + bx + c = 0\)  where \(a \ne 0\), 
+        For \(ax^2 + bx + c = 0\) where \(a \ne 0\),
         <p style="text-align: center; font-size: larger; font-weight: 700;">
             $x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}$
         </p>
@@ -64,7 +138,8 @@
 
     <fieldset class="fieldset" style="border-color: red">
         <legend style="text-align: center; font-weight:700;">Domination Convergence Theorem</legend>
-        Let {f<sub>n</sub>} be a sequence measurable functions. Suppose that the sequence converges pointwise to a function f i.e.
+        Let {f<sub>n</sub>} be a sequence measurable functions. Suppose that the sequence converges pointwise to a
+        function f i.e.
         <br>
         <p style="font-weight: bold;">\[\lim_{n \to \infty} f_n(x) = f(x) \]</p>
         exists for every $x \in S$. Asuume that the sequence $f_n$ is dominated by some integrable function $g$such that
@@ -76,13 +151,28 @@
     <br><br>
 
     <div class="fieldset box1">
-        <h2>Theorem 3.2.1  Green's Theorem </h2>
-            Let C be a positive oriented, piecewise smooth, simple closed curve in a plane, and $D$ be the region bounded by $C$.
-        If $L$ and $M$ are functions of $(x, y)$ defined on an open region containing $D$ and have continuous partial derivatives there, then
-        \[ \oint\limits_{C}\]
-        
+        <h2>Theorem 3.2.1 Green's Theorem </h2>
+        Let C be a positive
+        <a href="https://en.wikipedia.org/wiki/Curve_orientation" target="_blank">oriented</a>,
+        <a href="https://en.wikipedia.org/wiki/Piecewise_function" target="_blank">piecewise</a>
+        <a href="https://en.wikipedia.org/wiki/Smoothness" target="_blank">smooth</a>,
+        <a href="https://en.wikipedia.org/wiki/Curve#Jordan" target="_blank">simple closed curve</a>,
+        in a <a href="https://en.wikipedia.org/wiki/Plane_(mathematics)" target="_blank">plane</a>,
+        and $D$ be the region bounded by $C$.
+        If $L$ and $M$ are functions of $(x, y)$ defined on an
+        <a href="https://en.wikipedia.org/wiki/Open_set" target="_blank">open region</a>,
+        open region containing $D$ and have
+        <a href="https://en.wikipedia.org/wiki/Smoothness" target="_blank">continuous</a>
+        <a href="https://en.wikipedia.org/wiki/Smoothness" target="_blank">partial derivatives</a>
+        there, then
+        \[ \oint\limits_{C} \big(Ldx + Mdy \big) = \iint_{D} \bigg( \frac{\partial M}{\partial x} - \frac{\partial
+        L}{\partial y} \bigg)dA\]
+        where the path of integration along $C$ is
+        <a href="https://en.wikipedia.org/wiki/Clockwise" target="_blank" title="wikipedia">counterclockwise.</a>
+
     </div>
 
 
 </body>
+
 </html>
