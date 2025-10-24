@@ -1,67 +1,157 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
     <style>
-
-        body {
-            height: 4000px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        *{
-            margin: 0;   /*외부여백 0 */
-            padding: 0;  /* 내부여백 0 */
-            box-sizing: border-box;  /* 박스모델에 사이즈를 지정하면 border까지 사이즈를 지정함 */
+        .total-form {
+            border: 1px solid red;
+            width: 400px;
+            height: 600px;
         }
 
-        .text {
-            background-color: lightgray;
+        .sub-form {
+            width: 350px;
+            margin: 30px auto;
+
         }
 
-        .parents {
-            margin:50px;
-            width:500px;
-            height:300px;
-            border: 7px solid black;
-            position:sticky;
-            top:50px;
+        .box {
+            display: inline-block;
+            margin-right: 20px;
+            cursor: pointer;
         }
 
-        .red {
-            width:100px;
-            height:100px;
-            background-color: red;
-        }
-        .green {
-            width:100px;
-            height:100px;
-            background-color: green;
-            position:sticky;
-
-            left: 50px;
-            top: 20px;
-            z-index: 50;
-        }
-        .yellow {
-            width:100px;
-            height:100px;
-            background-color: yellow;
-            position:absolute;
+        .textbox {
+            display: block;
+            width: 100%;
+            height: 30px;
         }
 
+        .button {
+            width: 100%;
+            height: 40px;
+            background-color: blue;
+            text-align: center;
+        }
+
+        .check {
+            text-decoration: underline;
+            font-weight: 700;
+            font-size: small
+        }
+
+        .login {
+            display: inline-block;
+            text-decoration: none;
+            width: 70px;
+            color: black
+        }
+
+        .register {
+            display: inline-block;
+            text-decoration: none;
+            width: 70px;
+            color: black;
+        }
+
+        .hype:link {
+            color: blue;
+        }
+
+        .hype:visited {
+            color: blue;
+        }
+
+        .hype:hover {
+            color: orange;
+        }
+
+        .form_register {
+            display: none;
+
+            transition-property: all;
+        }
+
+        .form_login {
+            display: none;
+
+            transition-property: all;
+        }
+
+        #form_login:target {
+            display: block;
+        }
+
+        #form_register:target {
+            display: block
+        }
+
+        #form_login:target~.login {
+            text-decoration: underline;
+        }
     </style>
 
 </head>
-<body>
-    <div class="text"><h3>배경색이 lightgray <br> h3글자</h3></div>
 
-    <div class="parents">
-        <div class="red">A</div>
-        <div class="green">B</div>
-        <div class="yellow">C</div>
+<body>
+    <div class="total-form">
+        <div class="sub-form">
+            <h1><span style="font-weight: lighter;">지금 가입하시면</span> <br>웰컴쿠폰을 드려요!</h1>
+
+            <br><br>
+
+            <a class="login" href="#form_login">로그인</a>
+            <a class="register" href="#form_register">회원가입</a>
+            <br><br>
+            <div class="form_login" id="form_login">
+                이메일
+                <input class="textbox" type="text" placeholder="이메일을 입력해주세요.">
+                비밀번호
+                <input class="textbox" type="password" placeholder="비밀번호를 입력해주세요.">
+                <br>
+                <button class="button" type="submit">
+                    <h3 style="color:white;">로그인</h3>
+                </button>
+            </div>
+
+            <div class="form_register" id="form_register">
+                이메일
+                <input class="textbox" type="text" placeholder="이메일을 입력해주세요.">
+                이름 / 업체명
+                <input class="textbox" type="text" placeholder="2자 이상 20자 이하">
+                비밀번호
+                <input class="textbox" type="password" placeholder="영문 숫자 특수문자 조합 6-16자리">
+                비밀번호 확인
+                <input class="textbox" type="password" placeholder="비밀번호를 다시 입력해주세요.">
+                <div>
+                    <input type="checkbox"> <span class="check">개인정보수집이용안내</span> 및 <span class="check">약관</span>에
+                    동의합니다
+                </div>
+                <br>
+                <button class="button" type="submit">
+                    <h3 style="color:white;">회원 가입하기</h3>
+                </button>
+
+                <br><br>
+
+                <div style="text-align: center;">
+                    <a class="hype" href="">SNS로 간편하게 가입하기</a>
+                </div>
+            </div>
+            <br>
+        </div>
     </div>
+
 </body>
+
 </html>
