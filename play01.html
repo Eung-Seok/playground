@@ -60,8 +60,9 @@
         }
 
         .head {
-
+            height: 20px;
             background-color: lightgray;
+            position:relative;
         }
 
         .main {
@@ -71,18 +72,72 @@
             text-align: center;
         }
 
-        .container {
+        .container_1 {
             display: inline-block;
             width: 150px;
+            height:20px;
             text-align: center;
+        }
+
+        .container_1:hover .subindex {
+            display:block;
+        }
+
+        .container_2 {
+            display: inline-block;
+            width: 150px;
+            height:20px;
+            text-align: center;
+        }
+
+        .container_2:hover .subreference {
+            display:block;
         }
 
         .subindex {
             display: none;
+            position:absolute;
+            left:200px;
+            top:20px;
+            width:150px;
+            z-index: 100;
+            background-color: lightgray;
         }
 
+        .index_item {
+            height:30px;
+        }
+
+        .index_item:hover {
+            cursor:pointer;
+            text-decoration: underline;
+        }
         .subreference {
-            display:none;
+            display: none;
+            position:absolute;
+            left:350px;
+            top:20px;
+            width:150px;
+            z-index: 100;
+            background-color: lightgray;
+        }
+
+        .ref:link {
+            color:black
+        }
+
+        .ref:hover {
+            color:orange;
+        }
+
+        .ref:visited {
+            color:black;
+        }
+
+        .for_blank {
+            display: inline-block;
+            position:relative;
+            width:600px;
         }
     </style>
 
@@ -92,7 +147,7 @@
     <div class="head">
         <span class="main">응석피디아</span>
 
-        <span class="container">
+        <span class="container_1">
             <span class="index">Index</span>
             <span class="subindex">
                 <p class="index_item">리듬게임</p>
@@ -102,18 +157,21 @@
             </span>
         </span>
 
-        <span class="container">
+        <span class="container_2">
             <span class="reference">Reference</span>
             <span class="subreference">
-                <p class="ref_item">리듬게임</p>
-                <p class="ref_item">근의 공식</p>
-                <p class="ref_item">DCT</p>
-                <p class="ref_item">Green's Theorem</p>
+                <a class="ref" href="https://en.wikipedia.org/wiki/Dominated_convergence_theorem">DCM</a><br>
+                <a class="ref" href="https://en.wikipedia.org/wiki/Green%27s_theorem">Green's Theorem</a>
             </span>
         </span>
+
+        <span class="for_blank"></span>
         <a href="./log_in.html">login</a>
+        &ensp;
         <a href="./register.html">register</a>
     </div>
+
+    <!--텍스트 파트-->
     <div class="rythm">
         <span class="span">
             리듬게임을 방금 입문한 초보라도 배속을 어느정도 높여서 하는게 좋음 왜냐면<br><br>
@@ -125,6 +183,7 @@
 
     <br><br>
 
+    <!--근의 공식-->
     <fieldset class="fieldset">
         <legend style="text-align: center; font-weight:700;">근의 공식</legend>
         For \(ax^2 + bx + c = 0\) where \(a \ne 0\),
@@ -136,6 +195,7 @@
     <br><br>
 
 
+    <!-- DCT-->
     <fieldset class="fieldset" style="border-color: red">
         <legend style="text-align: center; font-weight:700;">Domination Convergence Theorem</legend>
         Let {f<sub>n</sub>} be a sequence measurable functions. Suppose that the sequence converges pointwise to a
@@ -150,6 +210,7 @@
 
     <br><br>
 
+    <!-- Green's Theorem-->
     <div class="fieldset box1">
         <h2>Theorem 3.2.1 Green's Theorem </h2>
         Let C be a positive
